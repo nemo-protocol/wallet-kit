@@ -13,11 +13,11 @@
     "ci:publish": "pnpm publish -r --no-git-checks --access public",
     "exp:publish": "pnpm publish -r --no-git-checks --access public --tag experimental",
     "build:all": "run-s build:sdk build:kit",
-    "dev:kit": "pnpm --filter @suiet/wallet-kit dev",
-    "build:kit": "pnpm --filter @suiet/wallet-kit build",
-    "build:website": "pnpm --filter @suiet/wallet-sdk build && pnpm --filter suiet-kit-doc build",
-    "dev:sdk": "pnpm --filter @suiet/wallet-sdk dev",
-    "build:sdk": "pnpm --filter @suiet/wallet-sdk build"
+    "dev:kit": "pnpm --filter @aricredemption/wallet-kit dev",
+    "build:kit": "pnpm --filter @aricredemption/wallet-kit build",
+    "build:website": "pnpm --filter @aricredemption/wallet-sdk build && pnpm --filter suiet-kit-doc build",
+    "dev:sdk": "pnpm --filter @aricredemption/wallet-sdk dev",
+    "build:sdk": "pnpm --filter @aricredemption/wallet-sdk build"
   },
   "keywords": [],
   "author": "",

@@ -7,7 +7,7 @@ import {
   AllDefaultWallets,
   defineStashedWallet,
   WalletProvider,
-} from "@suiet/wallet-kit";
+} from "@aricredemption/wallet-kit";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

@@ -6,8 +6,8 @@
 
   --wkit-border-radius: 16px;
 
-  --wkit-font-family: 'Inter', sans-serif;
-  --wkit-font-family-mono: 'IBM Plex Mono', monospace;
+  --wkit-font-family: "Inter", sans-serif;
+  --wkit-font-family-mono: "IBM Plex Mono", monospace;
 
   --wkit-font-size-large: 18px;
   --wkit-font-size-medium: 16px;
@@ -36,6 +36,15 @@
 //   --wkit-on-bg-rgb: 241, 241, 241;
 // }
 
+[data-theme="dark"]:root {
+  --wkit-bg-rgb: 14, 15, 22;
+  --wkit-border-rgb: 26, 28, 42;
+  --wkit-on-bg-rgb: 255, 255, 255;
+  --scrollbar-bg: #1e1e1e;
+  --scrollbar-thumb-bg: #555;
+  --wkit-button-bg-varient1: #0052f2;
+}
+
 .wkit-button {
   border-radius: var(--wkit-border-radius);
   width: var(--wkit-button-width);
@@ -59,5 +68,21 @@
 
   &:active {
     background-color: hsl(var(--wkit-accent-hs), 37%);
+  }
+}
+
+[data-theme="dark"] {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border: 3px solid var(--scrollbar-bg);
+    background-color: var(--scrollbar-thumb-bg);
   }
 }

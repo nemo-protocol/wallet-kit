@@ -5,7 +5,7 @@ import {
   AllDefaultWallets,
   defineStashedWallet,
   WalletProvider,
-} from "@suiet/wallet-kit";
+} from "@aricredemption/wallet-kit";
 import App from "../components/App";
 
 export default function Home() {

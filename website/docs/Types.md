@@ -22,7 +22,7 @@ export interface IDefaultWallet {
 example for customized defaultWallet item:
 
 ```typescript
-import IDefaultWallet from "@suiet/wallet-kit";
+import IDefaultWallet from "@aricredemption/wallet-kit";
 
 const myWallet: IDefaultWallet = {
   name: "myWallet",

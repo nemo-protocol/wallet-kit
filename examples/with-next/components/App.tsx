@@ -4,7 +4,7 @@ import {
   useWallet,
   SuiChainId,
   ErrorCode,
-} from "@suiet/wallet-kit";
+} from "@aricredemption/wallet-kit";
 import { Transaction } from "@mysten/sui/transactions";
 import { useMemo } from "react";
 import { Ed25519PublicKey } from "@mysten/sui/keypairs/ed25519";

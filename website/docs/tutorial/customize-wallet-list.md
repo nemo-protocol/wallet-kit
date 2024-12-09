@@ -23,7 +23,7 @@ import {
   SuiWallet,
   EthosWallet,
   IDefaultWallet,
-} from '@suiet/wallet-kit';
+} from '@aricredemption/wallet-kit';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -59,7 +59,7 @@ import {
   WalletProvider,
   defineStashedWallet,
   AllDefaultWallets,
-} from "@suiet/wallet-kit";
+} from "@aricredemption/wallet-kit";
 
 const stashedWalletConfig = defineStashedWallet({
   appName: "Your DApp Name",
@@ -109,7 +109,7 @@ If our wallet presets do not cover the wallets you need, you can simply define i
 import {
   WalletProvider,
   defineWallet,
-} from '@suiet/wallet-kit';
+} from '@aricredemption/wallet-kit';
 
 // customized wallet must support @mysten/wallet-standard
 const CustomizeWallet = defineWallet({

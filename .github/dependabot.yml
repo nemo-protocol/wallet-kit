@@ -11,4 +11,4 @@ updates:
       interval: "daily"
     allow:
       - dependency-name: "@mysten*"
-      - dependency-name: "@suiet*"
+      - dependency-name: "@aricredemption*"

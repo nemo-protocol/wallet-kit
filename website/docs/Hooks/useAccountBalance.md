@@ -29,7 +29,7 @@ The `error` object tells why get balance failed. If error is not null, it may me
 The `loading` can be used to add loading when fetching acount balance.
 
 ```tsx
-import { useAccountBalance } from '@suiet/wallet';
+import { useAccountBalance } from '@aricredemption/wallet';
 
 function App() {
   const { error, loading, balance } = useAccountBalance();
@@ -58,7 +58,7 @@ interface AccountBalanceResponse {
   balance: string;
 }
 
-import { useAccountBalance } from '@suiet/wallet';
+import { useAccountBalance } from '@aricredemption/wallet';
 
 function App() {
   const { error, loading, balance } = useAccountBalance();

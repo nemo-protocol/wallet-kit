@@ -5,7 +5,6 @@ import {
   useAccountBalance,
   useChain,
   useSuiClient,
-  useSuiProvider,
   useWallet,
 } from "./hooks";
 import {
@@ -16,8 +15,8 @@ import {
   SuiTestnetChain,
   Uint8arrayTool,
   Chain,
-} from "@suiet/wallet-sdk";
-import { AllDefaultWallets } from "@suiet/wallet-sdk";
+} from "@aricredemption/wallet-sdk";
+import { AllDefaultWallets } from "@aricredemption/wallet-sdk";
 import { Transaction } from "@mysten/sui/transactions";
 import { Ed25519PublicKey } from '@mysten/sui/keypairs/ed25519';
 
@@ -202,7 +201,6 @@ function App() {
       }}
     >
       <ConnectButton
-        className={"aaa"}
         style={{ marginTop: "16px" }}
         onConnectSuccess={(name) => {
           console.log("connect success: ", name);

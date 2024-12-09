@@ -42,7 +42,7 @@ import {
   WalletEvent,
   WalletEventListeners,
   WalletNotImplementError,
-} from "@suiet/wallet-sdk";
+} from "@aricredemption/wallet-sdk";
 import {
   ExecuteTransactionOptions,
   ExecuteTransactionResult,
@@ -97,6 +97,11 @@ export const WalletProvider = (props: WalletProviderProps) => {
   const account = useMemo<WalletAccount | undefined>(() => {
     if (!isCallable(walletAdapter, status)) return;
     return (walletAdapter as IWalletAdapter).accounts[0]; // use first account by default
+  }, [walletAdapter, status]);
+
+  const accounts = useMemo<WalletAccount[] | undefined>(() => {
+    if (!isCallable(walletAdapter, status)) return;
+    return [...(walletAdapter as IWalletAdapter).accounts];
   }, [walletAdapter, status]);
 
   const ensureCallable = (
@@ -455,6 +460,7 @@ export const WalletProvider = (props: WalletProviderProps) => {
         on,
         getAccounts,
         account,
+        accounts,
         signPersonalMessage,
         signTransaction,
         signAndExecuteTransaction,

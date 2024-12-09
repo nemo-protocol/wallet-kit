@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { isNonEmptyArray } from "../utils";
 import { useWalletAdapterDetection } from "./useWalletDetection";
-import { IDefaultWallet, IWallet } from "@suiet/wallet-sdk";
+import { IDefaultWallet, IWallet } from "@aricredemption/wallet-sdk";
 import { useInstallWebWalletAdapters } from "./useInstallWebWalletAdapters";
 
 export const useAvailableWallets = (defaultWallets: IDefaultWallet[]) => {

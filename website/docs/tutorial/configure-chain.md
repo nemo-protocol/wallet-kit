@@ -13,7 +13,7 @@ import {
   SuiTestnetChain,
   SuiMainnetChain,
   DefaultChains,
-} from "@suiet/wallet-kit";
+} from "@aricredemption/wallet-kit";
 
 const customChain: Chain = {
   id: "",

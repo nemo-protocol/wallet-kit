@@ -19,7 +19,7 @@ Usually you won't need to import it because we hide it inside our ConnectButton.
 Here is an example for you to use with your own connect button.
 
 ```jsx
-import { useWallet, ConnectModal } from '@suiet/wallet-kit';
+import { useWallet, ConnectModal } from '@aricredemption/wallet-kit';
 
 function App() {
   const {connected} = useWallet()

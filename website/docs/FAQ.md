@@ -5,9 +5,9 @@ sidebar_position: 999
 
 ## Q:  Property '#private' in type 'TransactionBlock' refers to a different member that cannot be accessed from within type 'TransactionBlock'.
 
-A: This error happens when the version of package `@mysten/sui.js` DOES NOT match with the peerDependency version in `@suiet/wallet-kit`. 
+A: This error happens when the version of package `@mysten/sui.js` DOES NOT match with the peerDependency version in `@aricredemption/wallet-kit`. 
 
-Because our wallet kit **externalizes** the `@mysten/sui.js` package, it is necessary to **make sure the version of `@mysten/sui.js` is the same as the peerDependency version in `@suiet/wallet-kit`**.
+Because our wallet kit **externalizes** the `@mysten/sui.js` package, it is necessary to **make sure the version of `@mysten/sui.js` is the same as the peerDependency version in `@aricredemption/wallet-kit`**.
 
 For example, in the following package.json, 
 
@@ -15,14 +15,14 @@ For example, in the following package.json,
 {
     "dependencies": {
         "@mysten/sui.js": "0.41.2",
-        "@suiet/wallet-kit": "0.2.22"
+        "@aricredemption/wallet-kit": "0.2.22"
     }
 }
 ```
 
 - The version of `@mysten/sui.js` is `0.41.2`
-- The version of `@suiet/wallet-kit` is `0.2.22` which requires `@mysten/sui.js` version to be `0.45.1`
-> You can confirm this by looking into the `peerDependency` section of the package.json of `@suiet/wallet-kit`
+- The version of `@aricredemption/wallet-kit` is `0.2.22` which requires `@mysten/sui.js` version to be `0.45.1`
+> You can confirm this by looking into the `peerDependency` section of the package.json of `@aricredemption/wallet-kit`
 
 So you need to **upgrade the version of `@mysten/sui.js` to `0.45.1`** in this case.
 
@@ -47,7 +47,7 @@ A: This is because the `const` parameter declarations used in `@mysten/bcs` were
 Reproducible Code:
 
 ```ts
-import { useSuiProvider } from '@suiet/wallet-kit';
+import { useSuiProvider } from '@aricredemption/wallet-kit';
 const { getTransactionBlock } = useSuiProvider()
 const transactionInfo = await getTransactionBlock({
     digest: String(res.digest),
@@ -61,7 +61,7 @@ const transactionInfo = await getTransactionBlock({
 A: This is because the incorrect deconstruction of `useSuiProvider` function. The correct way to use `useSuiProvider` is as a whole instance:
 
 ```diff
-import { useSuiProvider } from '@suiet/wallet-kit';
+import { useSuiProvider } from '@aricredemption/wallet-kit';
 - const { getTransactionBlock } = useSuiProvider()
 + const suiClient = useSuiProvider()
 - const transactionInfo = await getTransactionBlock({

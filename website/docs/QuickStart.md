@@ -22,16 +22,16 @@ So We recommend you to walk through our [Migration Guide To 0.2.x](/docs/migrati
 
 ## 🔨 Setup
 
-First of all, let's install the npm package `@suiet/wallet-kit` to your project.
+First of all, let's install the npm package `@aricredemption/wallet-kit` to your project.
 
-> npm package: https://www.npmjs.com/package/@suiet/wallet-kit
+> npm package: https://www.npmjs.com/package/@aricredemption/wallet-kit
 
 ```shell
-npm install @suiet/wallet-kit
+npm install @aricredemption/wallet-kit
 # or
-yarn add @suiet/wallet-kit
+yarn add @aricredemption/wallet-kit
 # or
-pnpm install @suiet/wallet-kit
+pnpm install @aricredemption/wallet-kit
 ```
 
 Next, make sure `@mysten/sui` is installed in your project. If not, install it as well.
@@ -49,8 +49,8 @@ Then wrap your `<App />` with our context provider, so that our hooks can work n
 Oh don't forget to import our css to enable default styles 🎨
 
 ```jsx
-import {WalletProvider} from '@suiet/wallet-kit';
-import '@suiet/wallet-kit/style.css';
+import {WalletProvider} from '@aricredemption/wallet-kit';
+import '@aricredemption/wallet-kit/style.css';
 
 // take react@18 project as an example
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -74,7 +74,7 @@ components, follow the instruction [#Use Hooks Only](/docs/tutorial/hooks-only)
 Just import our `<ConnectButton />` and place it to wherever you like, such as Header.
 
 ```jsx
-import {ConnectButton} from '@suiet/wallet-kit';
+import {ConnectButton} from '@aricredemption/wallet-kit';
 
 const App = () => {
   return (
@@ -98,7 +98,7 @@ your dapp is already empowered and able to call wallet capabilities.🎉
 > Please explore the docs for further usage information 💡
 
 ```jsx
-import {useWallet} from '@suiet/wallet-kit';
+import {useWallet} from '@aricredemption/wallet-kit';
 import {Transaction} from "@mysten/sui/transactions";
 
 const App = () => {

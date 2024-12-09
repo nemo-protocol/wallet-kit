@@ -7,7 +7,7 @@ import {
   KitError,
   WalletEvent,
   WalletEventListeners,
-} from "@suiet/wallet-sdk";
+} from "@aricredemption/wallet-sdk";
 import {
   SuiReportTransactionEffectsInput,
   SuiSignAndExecuteTransactionBlockInput,
@@ -38,6 +38,7 @@ export interface WalletContextState {
   name: string | undefined; // name of the connected wallet
   adapter: IWalletAdapter | undefined; // adapter provided by the connected wallet
   account: WalletAccount | undefined; // current account (the first account of accounts)
+  accounts: WalletAccount[] | undefined; // all accounts
   address: string | undefined; // alias for account.address
   connecting: boolean;
   connected: boolean;
@@ -109,6 +110,7 @@ const DEFAULT_CONTEXT: WalletContextState = {
   connecting: false,
   connected: false,
   account: undefined,
+  accounts: undefined,
   status: ConnectionStatus.DISCONNECTED,
   address: undefined,
   async select() {

@@ -5,7 +5,7 @@ import {
   AllDefaultWallets,
   defineStashedWallet,
   WalletProvider,
-} from "@suiet/wallet-kit";
+} from "@aricredemption/wallet-kit";
 
 /**
  * Custom provider component for integrating with third-party providers.

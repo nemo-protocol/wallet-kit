@@ -15,7 +15,7 @@ This hook is internally **JUST** importing the `JsonRpcProvider` interface and *
 :::
 
 ```jsx
-import { useSuiProvider } from '@suiet/wallet';
+import { useSuiProvider } from '@aricredemption/wallet';
 function YourComponent() {
   const {
     getObject,

@@ -5,7 +5,7 @@ import ConnectModal from "../Modal/ConnectModal";
 import { useWallet } from "../../hooks/useWallet";
 import "./index.scss";
 import WalletInfo from "../WalletInfo";
-import { BaseError } from "@suiet/wallet-sdk";
+import { BaseError } from "@aricredemption/wallet-sdk";
 
 export type ConnectButtonProps = Extendable & {
   label?: string;
@@ -29,6 +29,7 @@ export const ConnectButton = (props: ConnectButtonProps) => {
 
   return (
     <ConnectModal
+      theme="dark"
       open={showModal}
       onOpenChange={(open) => {
         if (connected) return;

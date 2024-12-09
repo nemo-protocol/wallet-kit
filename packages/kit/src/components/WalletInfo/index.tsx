@@ -11,7 +11,7 @@ import {
   addressEllipsis,
   UnknownChain,
   BaseError,
-} from "@suiet/wallet-sdk";
+} from "@aricredemption/wallet-sdk";
 
 export type ConnectButtonProps = Extendable & {
   label?: string;

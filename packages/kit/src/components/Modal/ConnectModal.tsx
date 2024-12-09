@@ -7,10 +7,11 @@ import { useWallet } from "../../hooks";
 import { isNonEmptyArray } from "../../utils";
 import Icon from "../Icon";
 import "./index.scss";
-import { BaseError, IWallet, KitError } from "@suiet/wallet-sdk";
+import { BaseError, IWallet, KitError } from "@aricredemption/wallet-sdk";
 
 export type ConnectModalProps = Extendable & {
   open?: boolean;
+  theme?: "dark" | "light";
   onOpenChange?: (open: boolean) => void;
   onConnectSuccess?: (walletName: string) => void;
   onConnectError?: (error: BaseError) => void;
@@ -40,14 +41,19 @@ const Header = () => {
 const Footer = () => {
   return (
     <div className={"wkit-new-to-sui"}>
-      <span className={"wkit-new-to-sui__text"}>New to sui? </span>
-      <a
+      <span className={"wkit-new-to-sui__text"}>
+        By connecting the wallet, I confirm that I have read and accept the
+        updated Terms of Use and Privacy Policy, I confirm that I am not based
+        in a jurisdiction where such access would be prohibited or restricted in
+        any manner.{" "}
+      </span>
+      {/* <a
         className={"wkit-new-to-sui__link"}
         href="https://suiet.app/docs/getting-started"
         target="_blank"
       >
         Learn More Here
-      </a>
+      </a> */}
     </div>
   );
 };
@@ -88,16 +94,18 @@ const WalletList = (props: {
   return (
     <div className={"wkit-select__container"}>
       <div className={"wkit-select__title"}>{props.title}</div>
-      {isNonEmptyArray(props.wallets) &&
-        props.wallets.map((wallet) => {
-          return (
-            <WalletItem
-              key={wallet.name}
-              wallet={wallet}
-              onSelect={props.onSelect}
-            />
-          );
-        })}
+      <div className="wkit-select__content">
+        {isNonEmptyArray(props.wallets) &&
+          props.wallets.map((wallet) => {
+            return (
+              <WalletItem
+                key={wallet.name}
+                wallet={wallet}
+                onSelect={props.onSelect}
+              />
+            );
+          })}
+      </div>
     </div>
   );
 };
@@ -111,14 +119,13 @@ const InstallGuide = (props: InstallGuideProps) => {
   return (
     <section>
       <div className={"wkit-dialog__header"}>
-        <Dialog.Title
-          className={"wkit-dialog__title"}
-          style={{ margin: "-8px 12px -6px -8px" }}
+        <div
+          style={{ position: "absolute", left: "16px", top: "16px" }}
+          className={"wkit-dialog__close"}
+          onClick={props.onNavBack}
         >
-          <span className="wkit-dialog__close" onClick={props.onNavBack}>
-            <SvgArrowLeft />
-          </span>
-        </Dialog.Title>
+          <SvgArrowLeft />
+        </div>
 
         <Dialog.Title className={"wkit-dialog__title"}>
           Install Wallet
@@ -161,14 +168,13 @@ const Connecting = (props: ConnectingProps) => {
   return (
     <section>
       <div className={"wkit-dialog__header"}>
-        <Dialog.Title
-          className={"wkit-dialog__title"}
-          style={{ margin: "-6px 12px -6px -8px" }}
+        <div
+          style={{ position: "absolute", left: "16px", top: "16px" }}
+          className={"wkit-dialog__close"}
+          onClick={props.onNavBack}
         >
-          <span className="wkit-dialog__close" onClick={props.onNavBack}>
-            <SvgArrowLeft />
-          </span>
-        </Dialog.Title>
+          <SvgArrowLeft />
+        </div>
 
         <Dialog.Title className={"wkit-dialog__title"}>Connecting</Dialog.Title>
       </div>
@@ -188,15 +194,30 @@ const Connecting = (props: ConnectingProps) => {
 };
 
 export const ConnectModal = (props: ConnectModalProps) => {
-  const { configuredWallets, detectedWallets, select, connecting } =
-    useWallet();
+  const {
+    allAvailableWallets,
+    configuredWallets,
+    detectedWallets,
+    select,
+    connecting,
+  } = useWallet();
+
+  console.log("configuredWallets", configuredWallets);
+  console.log("detectedWallets", detectedWallets);
 
   const {
+    theme,
     onConnectSuccess = () => {},
     onConnectError = (err) => {
       throw err;
     },
   } = props;
+
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+  }, [theme]);
 
   const [activeWallet, setActiveWallet] = useState<IWallet | undefined>();
 

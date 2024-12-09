@@ -4,7 +4,7 @@ sidebar_position: 999
 
 # Upgrade to v0.1.x
 
-Upgrade command: `npm install @suiet/wallet-kit@0.1`
+Upgrade command: `npm install @aricredemption/wallet-kit@0.1`
 
 You can replace `npm` with the package mananger you are using(e.g. npm, yarn, pnpm, etc)
 
@@ -51,8 +51,8 @@ We have deprecated [`WalletProvider`](/docs/components/WalletProvider) input `su
 
 ```diff
 import ReactDOM from 'react-dom';
-+ import { useWallet } from '@suiet/wallet-kit';
-- import { getDefaultWallets, useWallet } from '@suiet/wallet-kit';
++ import { useWallet } from '@aricredemption/wallet-kit';
+- import { getDefaultWallets, useWallet } from '@aricredemption/wallet-kit';
 
 - const supportedWallets = getDefaultWallets();
 

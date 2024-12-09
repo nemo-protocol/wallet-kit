@@ -8,8 +8,8 @@ import {
   ErrorCode,
   formatSUI,
   useSuiClient,
-} from "@suiet/wallet-kit";
-import "@suiet/wallet-kit/style.css";
+} from "@aricredemption/wallet-kit";
+import "@aricredemption/wallet-kit/style.css";
 import { Transaction } from "@mysten/sui/transactions";
 import { useMemo } from "react";
 import { Ed25519PublicKey } from "@mysten/sui/keypairs/ed25519";

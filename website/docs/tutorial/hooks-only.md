@@ -14,7 +14,7 @@ Firstly, add `WalletProvider` to wrap your App. The WalletProvider component pro
 > For customizing the default wallet list, check [WalletProvider](/docs/components/WalletProvider#customize-your-wallet-list-on-modal)
 
 ```jsx
-import { WalletProvider } from '@suiet/wallet-kit';
+import { WalletProvider } from '@aricredemption/wallet-kit';
 
 function RootComponent() {
   return (
@@ -31,7 +31,7 @@ In this case, you can manage these two components by `connected` status from `us
  And get active account address after connected.
 
 ```jsx
-import {useWallet} from '@suiet/wallet-kit';
+import {useWallet} from '@aricredemption/wallet-kit';
 import {useState, useEffect} from "react";
 
 function App() {
@@ -50,7 +50,7 @@ For your wallet-select modal component, let's just call it WalletSelector.
 You can use `select` method from `useWallet` hook to connect the one of the SUI wallets. 
 
 ```jsx
-import { useWallet } from '@suiet/wallet-kit';
+import { useWallet } from '@aricredemption/wallet-kit';
 
 function WalletSelector() {
   const { 

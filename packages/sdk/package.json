@@ -1,6 +1,6 @@
 {
-  "name": "@suiet/wallet-sdk",
-  "version": "0.3.2",
+  "name": "@aricredemption/wallet-sdk",
+  "version": "0.0.1",
   "license": "MIT",
   "type": "module",
   "scripts": {

@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 .wkit-dialog__overlay {
   position: fixed;
@@ -16,7 +16,7 @@
 .wkit-dialog__content {
   box-sizing: border-box;
   padding: 24px 24px;
-  width: 316px;
+  width: 838px;
   // max-height: 300px;
   position: relative;
   background-color: rgba(var(--wkit-bg-rgb), 1);
@@ -28,6 +28,7 @@
 }
 
 .wkit-dialog__title {
+  width: 100%;
   font-weight: 700;
   text-align: center;
   font-weight: 700;
@@ -35,7 +36,6 @@
   font-family: var(--wkit-font-family);
   line-height: var(--wkit-line-height-large);
   text-align: center;
-
   color: rgba(var(--wkit-on-bg-rgb), 1);
   margin: 0;
 }
@@ -86,8 +86,8 @@
   overflow-y: auto;
   margin-right: -12px;
   margin-left: -4px;
-  max-height: 380px;
-  min-height: 280px;
+  max-height: 70vh;
+  // min-height: 280px;
 }
 
 .wkit-select__container {
@@ -107,8 +107,16 @@
   margin-left: 6px;
 }
 
+.wkit-select__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
 .wkit-select-item {
   font-weight: 700;
+  padding: 20px 30px;
   font-size: var(--wkit-font-size-medium);
   font-family: var(--wkit-font-family);
   line-height: var(--wkit-line-height-medium);
@@ -117,17 +125,19 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 6px;
+  // padding: 6px;
   transition: background-color 0.2s;
   border-radius: var(--wkit-border-radius);
+  border: 1px solid rgba(var(--wkit-border-rgb));
 
   & {
-    background-color: var(--wkit-button-bg-varient1);
+    // background-color: var(--wkit-button-bg-varient1);
     color: rgba(var(--wkit-on-bg-rgb), 0.8);
   }
 
   &:hover {
-    background-color: rgba(var(--wkit-on-bg-rgb), 0.03);
+    background-color: var(--wkit-button-bg-varient1);
+    // background-color: rgba(var(--wkit-on-bg-rgb), 0.03);
     color: rgba(var(--wkit-on-bg-rgb), 1);
   }
 
@@ -153,7 +163,7 @@
 
 .wkit-new-to-sui {
   width: 100%;
-  height: 65px;
+  // height: 65px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -161,16 +171,18 @@
   background-color: rgba(var(--wkit-bg-rgb), 1);
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding: 12px 32px;
   border-top: 1px solid rgba(var(--wkit-on-bg-rgb), 0.1);
   border-radius: 0px 0px var(--wkit-border-radius) var(--wkit-border-radius);
 
   &__text {
     font-weight: 500;
-    font-size: var(--wkit-font-size-small);
-    line-height: var(--wkit-line-height-small);
+    font-size: 12px;
+    line-height: 16px;
+    // font-size: var(--wkit-font-size-small);
+    // line-height: var(--wkit-line-height-small);
     font-family: var(--wkit-font-family);
-    color: rgba(var(--wkit-on-bg-rgb), 0.5);
+    color: rgba(var(--wkit-on-bg-rgb), 0.6);
   }
 
   &__link {
@@ -208,7 +220,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 .wkit-connecting__logo,
 .wkit-install__logo {
