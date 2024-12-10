@@ -48,7 +48,7 @@ import {
   ExecuteTransactionResult,
 } from "../types/params";
 import { SuiClient } from "@mysten/sui/client";
-import { toB64 } from "@mysten/sui/utils";
+import { toBase64 } from "@mysten/sui/utils";
 import { SuiClientContext } from "../contexts/SuiClientContext";
 import { SuiSignAndExecuteTransactionOutput } from "@mysten/wallet-standard";
 
@@ -345,7 +345,7 @@ export const WalletProvider = (props: WalletProviderProps) => {
       if (effects && "bcs" in (effects as any)) {
         effectsB64 = (effects as any)?.bcs;
       } else if (res && (("rawEffects" in res) as any)) {
-        effectsB64 = toB64(new Uint8Array((res as any).rawEffects));
+        effectsB64 = toBase64(new Uint8Array((res as any).rawEffects));
       } else {
         throw new Error(
           "effects or rawEffects not found in the execution result"
