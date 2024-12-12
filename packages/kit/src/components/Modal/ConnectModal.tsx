@@ -281,6 +281,19 @@ export const ConnectModal = (props: ConnectModalProps) => {
     );
   }
 
+  // 添加移动端检测
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <BaseModal
       open={props.open}
@@ -290,6 +303,15 @@ export const ConnectModal = (props: ConnectModalProps) => {
         onOpenAutoFocus: (e: Event) => {
           e.preventDefault();
         },
+        style: isMobile ? {
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          margin: 0,
+          transform: 'none',
+        } : undefined
       }}
     >
       {renderBody()}
