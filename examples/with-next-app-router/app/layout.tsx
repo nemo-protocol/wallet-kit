@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Providers from "@/app/providers";
-import "@aricredemption/wallet-kit/style.css";
+import "@nemoprotocol/wallet-kit/style.css";
 
 const inter = Inter({ subsets: ['latin'] })
 

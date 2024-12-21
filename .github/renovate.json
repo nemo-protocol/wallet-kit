@@ -11,7 +11,7 @@
       "excludePackagePatterns": [
         "^@wallet-standard",
         "^@mysten",
-        "^@aricredemption"
+        "^@nemoprotocol"
       ],
       "enabled": false,
       "groupName": "sui_dependencies",

@@ -2,7 +2,7 @@ import { useWallet } from "./useWallet";
 import { SUI_TYPE_ARG } from "@mysten/sui/utils";
 import { useQuery } from "react-query";
 import { QueryKey, queryKey } from "../constants";
-import { AccountAssetManager } from "@aricredemption/wallet-sdk";
+import { AccountAssetManager } from "@nemoprotocol/wallet-sdk";
 import { useCallback } from "react";
 import { useChain } from "./useChain";
 

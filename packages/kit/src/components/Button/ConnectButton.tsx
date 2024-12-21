@@ -5,7 +5,7 @@ import ConnectModal from "../Modal/ConnectModal";
 import { useWallet } from "../../hooks/useWallet";
 import "./index.scss";
 import WalletInfo from "../WalletInfo";
-import { BaseError } from "@aricredemption/wallet-sdk";
+import { BaseError } from "@nemoprotocol/wallet-sdk";
 
 export type ConnectButtonProps = Extendable & {
   label?: string;

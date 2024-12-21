@@ -5,7 +5,7 @@ import {
   AllDefaultWallets,
   defineStashedWallet,
   WalletProvider,
-} from "@aricredemption/wallet-kit";
+} from "@nemoprotocol/wallet-kit";
 
 /**
  * Custom provider component for integrating with third-party providers.
@@ -19,7 +19,7 @@ const Providers: FC<any> = ({ children }) => {
       defaultWallets={[
         ...AllDefaultWallets,
         defineStashedWallet({
-          appName: "Suiet Kit Playground",
+          appName: "Nemo Kit Playground",
         }),
       ]}
     >

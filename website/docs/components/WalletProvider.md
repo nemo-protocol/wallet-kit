@@ -20,7 +20,7 @@ So you need to wrap all the kit hooks and components under `WalletProvider` befo
 
 ```jsx
 import ReactDOM from 'react-dom';
-import { WalletProvider } from '@aricredemption/wallet-kit';
+import { WalletProvider } from '@nemoprotocol/wallet-kit';
 
 function Root() {
   // wrap your app component

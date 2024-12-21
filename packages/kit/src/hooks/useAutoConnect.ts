@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { isNonEmptyArray } from "../utils";
 import { Storage } from "../utils/storage";
 import { StorageKey } from "../constants/storage";
-import { ConnectionStatus, IWallet } from "@aricredemption/wallet-sdk";
+import { ConnectionStatus, IWallet } from "@nemoprotocol/wallet-sdk";
 
 export function useAutoConnect(
   select: (name: string) => Promise<void>,

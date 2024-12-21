@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import '@aricredemption/wallet-kit/style.css';
+import '@nemoprotocol/wallet-kit/style.css';
 import '../components/App.css';
 import type { AppProps } from 'next/app';
 

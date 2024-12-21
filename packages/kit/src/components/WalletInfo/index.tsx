@@ -11,7 +11,7 @@ import {
   addressEllipsis,
   UnknownChain,
   BaseError,
-} from "@aricredemption/wallet-sdk";
+} from "@nemoprotocol/wallet-sdk";
 
 export type ConnectButtonProps = Extendable & {
   label?: string;

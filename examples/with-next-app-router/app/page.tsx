@@ -11,7 +11,7 @@ import {
   useChain,
   useSuiClient,
   useWallet,
-} from "@aricredemption/wallet-kit";
+} from "@nemoprotocol/wallet-kit";
 import { useMemo } from "react";
 import { Transaction } from "@mysten/sui/transactions";
 import { SuiSignAndExecuteTransactionOutput } from "@mysten/wallet-standard";

@@ -45,7 +45,7 @@ Remember to handle exceptional cases if some wallet adapters do not support cert
 
 ## For Wallet Developers
 
-### How to integrate with Suiet Kit?
+### How to integrate with Nemo Kit?
 
 Please make sure your wallet supports the [@mysten/wallet-standard](https://github.com/MystenLabs/sui/tree/main/sdk/wallet-adapter/wallet-standard) v0.5.0 and above.
 
@@ -64,9 +64,9 @@ you need to implement the following features in your wallet adapter:
 }
 ```
 
-### How to list my wallet on Suiet Kit?
+### How to list my wallet on Nemo Kit?
 
-You can contact our team via [Twitter@suiet_wallet](https://twitter.com/suiet_wallet) to list your wallet on Suiet Kit.
+You can contact our team via [Twitter@suiet_wallet](https://twitter.com/suiet_wallet) to list your wallet on Nemo Kit.
 
 Or submit a PR to our [repo](https://github.com/suiet/wallet-kit/pulls), modify the following files:
 

@@ -28,12 +28,12 @@ In this section, I am going to walk you through the installation and configurati
 
 ### Installation
 
-Suiet Wallet Kit is a decent wrapper for the official Typescript SDK `@mysten/sui` , which handles all the tedious details of wallet connection for you. Therefore, we need to install `@mysten/sui` along with the kit `@aricredemption/wallet-kit`.
+Suiet Wallet Kit is a decent wrapper for the official Typescript SDK `@mysten/sui` , which handles all the tedious details of wallet connection for you. Therefore, we need to install `@mysten/sui` along with the kit `@nemoprotocol/wallet-kit`.
 
 >  For simplicity, we choose npm as the package manager, feel free to change to any alternatives.
 
 ```shell
-npm install @mysten/sui @aricredemption/wallet-kit
+npm install @mysten/sui @nemoprotocol/wallet-kit
 ```
 
 ### Setup WalletProvider for the App
@@ -44,7 +44,7 @@ Next, let's import the `WalletProvider` and setup for your react project such th
 // src/index.js
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { WalletProvider } from "@aricredemption/wallet-kit";
+import { WalletProvider } from "@nemoprotocol/wallet-kit";
 
 import App from "./App";
 
@@ -120,7 +120,7 @@ import {
   ConnectButton,
   useWallet,
   addressEllipsis,
-} from "@aricredemption/wallet-kit";
+} from "@nemoprotocol/wallet-kit";
 
 export default function App() {
   // Get access to the connected wallet
@@ -261,7 +261,7 @@ We've defined the smart contract target as well as the arguments, now it's time 
 Okay, get back to the code. Let's create an async function that creates and sends the transaction to the wallet for signing and execution.
 
 ```jsx
-import { useWallet } from "@aricredemption/wallet-kit";
+import { useWallet } from "@nemoprotocol/wallet-kit";
 import { Transaction } from "@mysten/sui";
 
 function createMintNftTxnBlock() {

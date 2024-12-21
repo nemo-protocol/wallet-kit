@@ -4,18 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite --port 9000",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mysten/sui": "1.1.0",
-    "@aricredemption/wallet-kit": "0.3.2",
+    "@nemoprotocol/wallet-kit": "^0.0.3",
+    "@mysten/sui": "1.12.0",
+    "buffer": "^6.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
+    "@types/node": "^20.4.2",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^4.3.1",

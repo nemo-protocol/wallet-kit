@@ -1,4 +1,4 @@
-import suietLogo from "./assets/suiet-logo.svg";
+import NemoLogo from "./assets/nemo-logo.png";
 import "./App.css";
 import {
   ConnectButton,
@@ -8,8 +8,8 @@ import {
   ErrorCode,
   formatSUI,
   useSuiClient,
-} from "@aricredemption/wallet-kit";
-import "@aricredemption/wallet-kit/style.css";
+} from "@nemoprotocol/wallet-kit";
+import "@nemoprotocol/wallet-kit/style.css";
 import { Transaction } from "@mysten/sui/transactions";
 import { useMemo } from "react";
 import { Ed25519PublicKey } from "@mysten/sui/keypairs/ed25519";
@@ -114,7 +114,7 @@ function App() {
       });
       const verifyResult = await wallet.verifySignedMessage(
         result,
-        wallet.account.publicKey
+        new Uint8Array(wallet.account.publicKey)
       );
       console.log("verify signedMessage", verifyResult);
       if (!verifyResult) {
@@ -184,11 +184,11 @@ function App() {
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
-        <a href="https://github.com/suiet/wallet-kit" target="_blank">
-          <img src={suietLogo} className="logo" alt="Suiet logo" />
+        <a href="https://github.com/nemo-protocol/wallet-kit" target="_blank">
+          <img src={NemoLogo} className="logo" alt="Nemo logo" />
         </a>
       </div>
-      <h1>Vite + Suiet Kit</h1>
+      <h1>Vite + Nemo Wallet Kit</h1>
       <div className="card">
         <ConnectButton
           onConnectError={(error) => {
@@ -203,7 +203,7 @@ function App() {
         />
 
         {!wallet.connected ? (
-          <p>Connect DApp with Suiet wallet from now!</p>
+          <p>Connect DApp with Nemo Wallet Kit from now!</p>
         ) : (
           <div>
             <div>
@@ -226,7 +226,12 @@ function App() {
                 SUI
               </p>
               <p>
-                wallet publicKey: {uint8arrayToHex(wallet.account?.publicKey)}
+                wallet publicKey:{" "}
+                {uint8arrayToHex(
+                  wallet.account?.publicKey
+                    ? new Uint8Array(wallet.account.publicKey)
+                    : undefined
+                )}
               </p>
             </div>
             <div className={"btn-group"} style={{ margin: "8px 0" }}>
@@ -258,7 +263,7 @@ function App() {
         )}
       </div>
       <p className="read-the-docs">
-        Click on the Vite and Suiet logos to learn more
+        Click on the Vite and Nemo logos to learn more
       </p>
     </div>
   );

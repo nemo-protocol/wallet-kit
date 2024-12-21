@@ -1,5 +1,5 @@
 import { useLayoutEffect } from "react";
-import { IDefaultWallet, WalletType } from "@aricredemption/wallet-sdk";
+import { IDefaultWallet, WalletType } from "@nemoprotocol/wallet-sdk";
 import { isNonEmptyArray } from "../utils";
 
 export function useInstallWebWalletAdapters(defaultWallets: IDefaultWallet[]) {

@@ -9,8 +9,8 @@ import {
   WalletProvider,
   defineStashedWallet,
   AllDefaultWallets,
-} from "@aricredemption/wallet-kit";
-import "@aricredemption/wallet-kit/style.css";
+} from "@nemoprotocol/wallet-kit";
+import "@nemoprotocol/wallet-kit/style.css";
 import KitBanner from "../../static/img/kit-banner.svg";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { CustomFields } from "@site/types/customFields";

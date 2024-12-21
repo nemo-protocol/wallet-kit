@@ -7,7 +7,7 @@ import { useWallet } from "../../hooks";
 import { isNonEmptyArray } from "../../utils";
 import Icon from "../Icon";
 import "./index.scss";
-import { BaseError, IWallet, KitError } from "@aricredemption/wallet-sdk";
+import { BaseError, IWallet, KitError } from "@nemoprotocol/wallet-sdk";
 
 export type ConnectModalProps = Extendable & {
   open?: boolean;

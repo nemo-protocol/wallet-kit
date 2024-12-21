@@ -7,7 +7,7 @@ import {
   KitError,
   WalletEvent,
   WalletEventListeners,
-} from "@aricredemption/wallet-sdk";
+} from "@nemoprotocol/wallet-sdk";
 import {
   SuiReportTransactionEffectsInput,
   SuiSignAndExecuteTransactionBlockInput,

@@ -15,8 +15,8 @@ import {
   SuiTestnetChain,
   Uint8arrayTool,
   Chain,
-} from "@aricredemption/wallet-sdk";
-import { AllDefaultWallets } from "@aricredemption/wallet-sdk";
+} from "@nemoprotocol/wallet-sdk";
+import { AllDefaultWallets } from "@nemoprotocol/wallet-sdk";
 import { Transaction } from "@mysten/sui/transactions";
 import { Ed25519PublicKey } from '@mysten/sui/keypairs/ed25519';
 

@@ -7,7 +7,7 @@ import {
   AllDefaultWallets,
   defineStashedWallet,
   WalletProvider,
-} from "@aricredemption/wallet-kit";
+} from "@nemoprotocol/wallet-kit";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       defaultWallets={[
         ...AllDefaultWallets,
         defineStashedWallet({
-          appName: "Suiet Kit Playground",
+          appName: "Nemo Kit Playground",
         }),
       ]}
     >

@@ -62,7 +62,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Suiet Kit',
+        title: 'Nemo Kit',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',

@@ -20,7 +20,7 @@ We recommend using `ConnectButton` component to integrate Suiet wallet kit 🥳 
 import {
   ConnectButton,
   WalletProvider,
-} from '@aricredemption/wallet-kit';
+} from '@nemoprotocol/wallet-kit';
 
 function App() {
   return (
@@ -38,7 +38,7 @@ Sometimes you may want to hook in the connection events and do something with th
 >  If you are using hooks only, then simply wrap a try-catch block for the async  `select` method!
 
 ```jsx
-import {WalletProvider, ConnectButton, ErrorCode, BaseError} from "@aricredemption/wallet-kit";
+import {WalletProvider, ConnectButton, ErrorCode, BaseError} from "@nemoprotocol/wallet-kit";
 
 function App() {
   return (

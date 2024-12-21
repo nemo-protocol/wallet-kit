@@ -26,7 +26,7 @@ For example, import the default css file in the `src/index.jsx` file:
 
 ```jsx title="src/index.jsx"
 import * as React from "react";
-import "@aricredemption/wallet-kit/style.css"; // Add this line to your code
+import "@nemoprotocol/wallet-kit/style.css"; // Add this line to your code
 
 // Your Application code below
 function App() {

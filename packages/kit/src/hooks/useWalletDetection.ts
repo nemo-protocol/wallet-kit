@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { IWalletAdapter, IWalletRadar, WalletRadar } from "@aricredemption/wallet-sdk";
+import { IWalletAdapter, IWalletRadar, WalletRadar } from "@nemoprotocol/wallet-sdk";
 
 /**
  * detect wallet adapters that support wallet-standard from window and register event

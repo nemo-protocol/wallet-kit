@@ -42,7 +42,7 @@ import {
   WalletEvent,
   WalletEventListeners,
   WalletNotImplementError,
-} from "@aricredemption/wallet-sdk";
+} from "@nemoprotocol/wallet-sdk";
 import {
   ExecuteTransactionOptions,
   ExecuteTransactionResult,

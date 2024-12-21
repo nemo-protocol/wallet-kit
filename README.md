@@ -1,16 +1,14 @@
-<p align="center"><a href="https://suiet.app">
+<p align="center"><a href="https://www.nemoprotocol.com/">
 <img width="480" src="/assets/LogoWithSlogen.png"/>
 </a></p>
 
-# Suiet wallet kit, connection made easy
+# Nemo wallet kit, connection made easy
 
 <a href="https://github.com/wallet-standard/wallet-standard">
   <img src="https://badgen.net/badge/wallet-standard/supported/green" />
 </a>
 
-> 👋 If you want to know how to **install/use** suiet, please visit our offical website [suiet.app](https://suiet.app) or [docs](https://suiet.app/docs)
-
-Suiet wallet kit is an awesome react toolkit for DApps to interact with all the wallets in Sui💧 easily 🥳
+Nemo wallet kit is an awesome react toolkit for DApps to interact with all the wallets in Sui💧 easily 🥳
 
 Now we announce the **[Sui Wallet Standard](https://github.com/MystenLabs/sui/tree/main/sdk/wallet-adapter/wallet-standard)** is supported ✅ Update to the latest kit version and empower your dapp with auto-detect-wallet feature 🥳 
 
@@ -22,6 +20,4 @@ We present **React Provider & Hooks, UI components** for the DApp (React) develo
 
 See [https://kit.suiet.app/docs/QuickStart](https://kit.suiet.app/docs/QuickStart)
 
-> 💡 Have fun with [Demo Playground](https://wallet-kit-demo.vercel.app/) + [Vite example repo](https://github.com/suiet/wallet-kit/tree/main/examples/with-vite) 
-
-<img src="/assets/wallet-kit.png" />
+> 💡 Have fun with [Demo Playground](https://www.nemoprotocol.com/#/wallet-kit) + [Vite example repo](https://github.com/suiet/wallet-kit/tree/main/examples/with-vite) 

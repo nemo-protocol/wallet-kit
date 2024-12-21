@@ -140,4 +140,4 @@ The mysten wallet standard has been updated to version 0.5.0.
 
 So make sure your wallet adapter supports it, otherwise our kit will not detect your wallet as valid ones.
 
-For more of integration details, check out [How to integrate with Suiet Kit?](/docs/CanIUse#how-to-integrate-with-suiet-kit)
+For more of integration details, check out [How to integrate with Nemo Kit?](/docs/CanIUse#how-to-integrate-with-suiet-kit)

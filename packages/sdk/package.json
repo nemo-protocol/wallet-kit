@@ -1,6 +1,6 @@
 {
-  "name": "@aricredemption/wallet-sdk",
-  "version": "0.0.1",
+  "name": "@nemoprotocol/wallet-sdk",
+  "version": "0.1.0",
   "license": "MIT",
   "type": "module",
   "scripts": {

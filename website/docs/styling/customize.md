@@ -65,7 +65,7 @@ The CSS variables must be imported / declared **AFTER** the default CSS file.
 For example, in the `src/index.jsx` file:
 
 ```jsx title="src/index.jsx"
-import '@aricredemption/wallet-kit/style.css';
+import '@nemoprotocol/wallet-kit/style.css';
 import './suiet-wallet-kit-custom.css'; // You CSS file here
 ```
 
@@ -100,6 +100,6 @@ Your CSS rules must be imported / declared **AFTER** the default CSS file.
 For example, in the `src/index.jsx` file:
 
 ```jsx title="src/index.jsx"
-import '@aricredemption/wallet-kit/style.css';
+import '@nemoprotocol/wallet-kit/style.css';
 import './suiet-wallet-kit-custom.css'; // You css file here
 ```

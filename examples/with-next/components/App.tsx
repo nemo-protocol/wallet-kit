@@ -4,7 +4,7 @@ import {
   useWallet,
   SuiChainId,
   ErrorCode,
-} from "@aricredemption/wallet-kit";
+} from "@nemoprotocol/wallet-kit";
 import { Transaction } from "@mysten/sui/transactions";
 import { useMemo } from "react";
 import { Ed25519PublicKey } from "@mysten/sui/keypairs/ed25519";
@@ -161,7 +161,7 @@ function App() {
           <img src={"/suiet-logo.svg"} className="logo" alt="Suiet logo" />
         </a>
       </div>
-      <h1>Vite + Suiet Kit</h1>
+      <h1>Vite + Nemo Kit</h1>
       <div className="card">
         <ConnectButton
           onConnectError={(error) => {

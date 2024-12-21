@@ -5,7 +5,7 @@ import {
   AllDefaultWallets,
   defineStashedWallet,
   WalletProvider,
-} from "@aricredemption/wallet-kit";
+} from "@nemoprotocol/wallet-kit";
 import App from "../components/App";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       defaultWallets={[
         ...AllDefaultWallets,
         defineStashedWallet({
-          appName: "Suiet Kit Playground",
+          appName: "Nemo Kit Playground",
         }),
       ]}
     >

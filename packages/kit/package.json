@@ -1,6 +1,6 @@
 {
-  "name": "@aricredemption/wallet-kit",
-  "version": "0.0.3",
+  "name": "@nemoprotocol/wallet-kit",
+  "version": "0.1.0",
   "type": "module",
   "files": [
     "dist"
@@ -29,7 +29,7 @@
     "@mysten/wallet-standard": "0.13.7",
     "@mysten/zksend": "^0.11.0",
     "@radix-ui/react-dialog": "^1.0.2",
-    "@aricredemption/wallet-sdk": "workspace:*",
+    "@nemoprotocol/wallet-sdk": "workspace:*",
     "@svgr/rollup": "^6.5.1",
     "@wallet-standard/core": "1.0.3",
     "buffer": "^6.0.3",

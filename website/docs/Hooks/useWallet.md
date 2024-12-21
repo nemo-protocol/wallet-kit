@@ -25,7 +25,7 @@ Make sure it runs in a React component under `WalletProvider`
 We start with a simple senario like getting information from the connected wallet .
 
 ```jsx
-import {useWallet} from '@aricredemption/wallet-kit'
+import {useWallet} from '@nemoprotocol/wallet-kit'
 
 function App() {
   const wallet = useWallet();
@@ -47,7 +47,7 @@ batch transactions in one call.
 Here we define a `moveCall` transaction to implement a simple nft minting example.
 
 ```jsx
-import {useWallet} from '@aricredemption/wallet-kit'
+import {useWallet} from '@nemoprotocol/wallet-kit'
 
 function App() {
   const wallet = useWallet();
@@ -100,7 +100,7 @@ Here is an example for signing a simple message "Hello World".
 
 
 ```tsx
-import {useWallet} from '@aricredemption/wallet-kit'
+import {useWallet} from '@nemoprotocol/wallet-kit'
 import * as tweetnacl from 'tweetnacl'
 
 function App() {
@@ -154,7 +154,7 @@ In a nutshell, eliminating the need to switch network for dapp is a better user 
 :::
 
 ```tsx
-import {useWallet} from '@aricredemption/wallet-kit'
+import {useWallet} from '@nemoprotocol/wallet-kit'
 import * as tweetnacl from 'tweetnacl'
 
 function App() {
@@ -235,7 +235,7 @@ Get all the accessible accounts returned by wallet.
 The getAccounts will get the current wallet's account address. Now one wallet only have one account.
 
 ```jsx
-import {useWallet} from '@aricredemption/wallet-kit';
+import {useWallet} from '@nemoprotocol/wallet-kit';
 
 function YourComponent() {
   const wallet = useWallet();
