@@ -2,7 +2,9 @@
 <img width="480" src="https://www.nemoprotocol.com/assets/logo-3l5o1FE6.svg"/>
 </a></p>
 
-> Based on the open-source code of Suiwallet SDK, various wallets and Suietkit, we have integrated the latest active wallets and exchange wallets on Sui and launched an open-source code with continuous maintenance. We hope it can assist the partners of Hydropower and  other partners building on Sui. Thanks to the open-source culture of Sui.
+Building on the open-source magic of the Suiwallet SDK, various wallets, and Suietkit, we’ve brought together the latest active wallets and exchange wallets on Sui into one open-source codebase! 🎉 And guess what? We’re keeping it fresh with continuous updates. 🚀  
+
+We hope this becomes a handy tool for Hydropower and all our amazing partners building on Sui. Huge shoutout to the incredible open-source culture of Sui for making this possible. 💙 Let's keep building together! ✨
 
 # Nemo wallet kit, connection made easy
 
