@@ -5,7 +5,7 @@ import "./index.css";
 
 import {
   AllDefaultWallets,
-  defineStashedWallet,
+  defineSlushWallet,
   WalletProvider,
 } from "@nemoprotocol/wallet-kit";
 
@@ -14,8 +14,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <WalletProvider
       defaultWallets={[
         ...AllDefaultWallets,
-        defineStashedWallet({
-          appName: "Nemo Kit Playground",
+        defineSlushWallet({
+          appName: "Suiet Kit Playground",
         }),
       ]}
     >

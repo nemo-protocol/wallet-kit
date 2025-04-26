@@ -1,8 +1,8 @@
-name: SUIET_KIT_CICD_PIPELINE_FOR_EXP
+name: SUIET_KIT_CICD_PIPELINE_FOR_BETA
 on:
   push:
     tags:
-      - v*-exp-*
+      - v*-beta.*
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,6 +23,6 @@ jobs:
       - name: Build all packages
         run: npm run build:all
       - name: Publish all packages
-        run: npm run exp:publish
+        run: npm run beta:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

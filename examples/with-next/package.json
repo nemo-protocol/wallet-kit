@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mysten/sui": "1.1.0",
+    "@mysten/sui": "1.28.2",
     "@nemoprotocol/wallet-kit": "0.3.2",
     "@types/node": "18.11.11",
     "@types/react": "18.0.26",

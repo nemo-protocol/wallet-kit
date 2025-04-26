@@ -11,7 +11,7 @@ import {
   ErrorCode,
   SuiChainId,
   formatSUI,
-  defineStashedWallet,
+  defineSlushWallet,
   SuiTestnetChain,
   Uint8arrayTool,
   Chain,
@@ -133,12 +133,17 @@ function App() {
 
     try {
       const msg = "Hello world!";
+      const msgBytes = new TextEncoder().encode(msg);
+      // Convert ReadonlyUint8Array to Uint8Array
+      const msgUint8Array = new Uint8Array(msgBytes);
+      
       const result = await wallet.signPersonalMessage({
-        message: new TextEncoder().encode(msg),
+        message: msgUint8Array,
       });
+      const publickKey = new Uint8Array(wallet.account.publicKey);
       const isValid = await wallet.verifySignedMessage(
         result,
-        wallet.account.publicKey
+        publickKey
       );
       console.log("verify signedMessage", isValid);
       alert("signMessage succeeded (see response in the console)");
@@ -301,19 +306,13 @@ function App() {
   );
 }
 
-const stashedWallet = defineStashedWallet({
+const slushWallet = defineSlushWallet({
   appName: "Suiet Wallet Kit",
 });
-const suietMainnetChain: Chain = {
-  id: SuiChainId.MAIN_NET,
-  name: "Sui Mainnet",
-  rpcUrl: "https://mainnet.suiet.app/",
-};
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <WalletProvider
-      defaultWallets={[...AllDefaultWallets, stashedWallet]}
-      chains={[suietMainnetChain]}
+      defaultWallets={[...AllDefaultWallets, slushWallet]}
     >
       <App />
     </WalletProvider>

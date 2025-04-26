@@ -3,7 +3,7 @@
 import { FC } from "react";
 import {
   AllDefaultWallets,
-  defineStashedWallet,
+  defineSlushWallet,
   WalletProvider,
 } from "@nemoprotocol/wallet-kit";
 

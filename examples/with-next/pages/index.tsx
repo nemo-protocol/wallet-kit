@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import {
   AllDefaultWallets,
-  defineStashedWallet,
+  defineSlushWallet,
   WalletProvider,
 } from "@nemoprotocol/wallet-kit";
 import App from "../components/App";

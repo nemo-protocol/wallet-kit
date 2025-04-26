@@ -8,6 +8,7 @@ export const AllDefaultWallets = [
   presets.SuietWallet,
   presets.SurfWallet,
   presets.NightlyWallet,
+  presets.SlushWallet,
   ...[
     presets.EthosWallet,
     presets.MartianWallet,
@@ -18,6 +19,7 @@ export const AllDefaultWallets = [
     presets.SensuiWallet,
     presets.ElliWallet,
     presets.TokenPocketWallet,
-    presets.FrontierWallet
+    presets.FrontierWallet,
+    presets.PhantomWallet,
   ].sort((a, b) => (a.name < b.name ? -1 : 1)),
 ];

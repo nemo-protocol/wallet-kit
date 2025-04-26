@@ -114,7 +114,7 @@ function App() {
       });
       const verifyResult = await wallet.verifySignedMessage(
         result,
-        new Uint8Array(wallet.account.publicKey)
+        wallet.account.publicKey as any
       );
       console.log("verify signedMessage", verifyResult);
       if (!verifyResult) {
@@ -139,7 +139,7 @@ function App() {
       console.log(`Sign and verify txn:`);
       console.log("--wallet: ", wallet.adapter?.name);
       console.log("--account: ", wallet.account?.address);
-      const publicKey = wallet.account?.publicKey;
+      const publicKey = wallet.account?.publicKey as any;
       if (!publicKey) {
         console.error("no public key provided by wallet");
         return;
@@ -226,12 +226,7 @@ function App() {
                 SUI
               </p>
               <p>
-                wallet publicKey:{" "}
-                {uint8arrayToHex(
-                  wallet.account?.publicKey
-                    ? new Uint8Array(wallet.account.publicKey)
-                    : undefined
-                )}
+                wallet publicKey: {uint8arrayToHex(wallet.account?.publicKey as any)}
               </p>
             </div>
             <div className={"btn-group"} style={{ margin: "8px 0" }}>
