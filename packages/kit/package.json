@@ -1,6 +1,6 @@
 {
   "name": "@nemoprotocol/wallet-kit",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "type": "module",
   "files": [
     "dist"
@@ -30,7 +30,7 @@
     "@mysten/wallet-standard": "0.14.7",
     "@mysten/zksend": "0.11.0",
     "@radix-ui/react-dialog": "1.0.2",
-    "@nemoprotocol/wallet-sdk": "0.1.11",
+    "@nemoprotocol/wallet-sdk": "0.1.12",
     "@svgr/rollup": "6.5.1",
     "@wallet-standard/core": "1.0.3",
     "buffer": "6.0.3",

@@ -29,7 +29,7 @@ export const defineStashedWallet = defineSlushWallet;
 
 // register names of wallet adapters, used for detection
 export enum PresetWallet {
-  SLUSH_WALLET = "Slush — A Sui wallet",
+  SLUSH_WALLET = "Slush",
   SUIET_WALLET = "Suiet",
   ETHOS_WALLET = "Ethos Wallet",
   SURF_WALLET = "Surf Wallet",
