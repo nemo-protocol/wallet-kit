@@ -27,6 +27,7 @@ import {
 import {
   ExecuteTransactionOptions,
   ExecuteTransactionResult,
+  ExtendedSuiSignAndExecuteTransactionInput,
 } from "../types/params";
 
 export interface WalletContextState {
@@ -48,7 +49,7 @@ export interface WalletContextState {
   getAccounts: () => readonly WalletAccount[];
 
   signAndExecuteTransaction<Output extends SuiSignAndExecuteTransactionOutput>(
-    input: Omit<SuiSignAndExecuteTransactionInput, "account" | "chain">,
+    input: ExtendedSuiSignAndExecuteTransactionInput,
     options?: ExecuteTransactionOptions
   ): Promise<Output>;
 

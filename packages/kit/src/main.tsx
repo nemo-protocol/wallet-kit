@@ -128,6 +128,33 @@ function App() {
     }
   }
 
+  // 新增：使用 { transaction: tx, client } 写法的示例
+  async function handleSignAndExecuteWithClient(
+    target: string | undefined
+  ) {
+    if (!target) return;
+    try {
+      const tx = createMintNftTxb(target);
+      
+      // 新的写法：直接在参数中传入client
+      const resData = await wallet.signAndExecuteTransaction({
+        transaction: tx,
+        client: client, // 直接传入自定义client
+        options: {
+          showRawEffects: true,
+          showObjectChanges: true,
+          showEvents: true,
+        },
+      });
+      
+      console.log("signAndExecuteTransaction with client success", resData);
+      alert("Custom client execution succeeded (see response in the console)");
+    } catch (e) {
+      console.error("Custom client execution failed", e);
+      alert("Custom client execution failed (see response in the console)");
+    }
+  }
+
   async function handleSignPersonalMessage() {
     if (!wallet.account) return;
 
@@ -297,7 +324,18 @@ function App() {
                 }
               >
                 Sign Transaction + Verify Signature
-                </button>
+              </button>
+            )}
+          </div>
+          <div style={{ margin: "8px 0", display: "flex", gap: "8px" }}>
+            {nftContractAddr && (
+              <button
+                onClick={() =>
+                  handleSignAndExecuteWithClient(nftContractAddr)
+                }
+              >
+                transaction + client 写法
+              </button>
             )}
           </div>
         </div>

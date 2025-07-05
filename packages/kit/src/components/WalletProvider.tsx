@@ -46,6 +46,7 @@ import {
 import {
   ExecuteTransactionOptions,
   ExecuteTransactionResult,
+  ExtendedSuiSignAndExecuteTransactionInput,
 } from "../types/params";
 import { SuiClient } from "@mysten/sui/client";
 import { toBase64 } from "@mysten/sui/utils";
@@ -311,7 +312,7 @@ export const WalletProvider = (props: WalletProviderProps) => {
 
   const signAndExecuteTransaction = useCallback(
     async <Output extends SuiSignAndExecuteTransactionOutput>(
-      input: Omit<SuiSignAndExecuteTransactionInput, "account" | "chain">,
+      input: ExtendedSuiSignAndExecuteTransactionInput,
       options?: ExecuteTransactionOptions
     ): Promise<Output> => {
       const [_wallet, account] = safelyGetWalletAndAccount();
@@ -322,13 +323,20 @@ export const WalletProvider = (props: WalletProviderProps) => {
         if (typeof options?.execute === "function") {
           return await options.execute(signedTransaction);
         }
-        // by default, we only return the digest and rawEffects
-        return await suiClient.executeTransactionBlock({
+        
+        // 使用传入的client或默认client
+        const clientToUse = input.client || suiClient;
+        
+        // 合并选项
+        const executionOptions = {
+          showRawEffects: true,
+          ...input.options,
+        };
+        
+        return await clientToUse.executeTransactionBlock({
           transactionBlock: signedTransaction.bytes,
           signature: signedTransaction.signature,
-          options: {
-            showRawEffects: true,
-          },
+          options: executionOptions,
         });
       };
 
