@@ -3,7 +3,8 @@
   "version": "0.1.16",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "dev": "vite --port 3000",
