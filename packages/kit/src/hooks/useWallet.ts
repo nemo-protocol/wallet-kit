@@ -155,5 +155,5 @@ const DEFAULT_CONTEXT: WalletContextState = {
 export const WalletContext = createContext<WalletContextState>(DEFAULT_CONTEXT);
 
 export function useWallet(): WalletContextState {
-  return useContext(WalletContext);
+  return useContext(WalletContext).currentWallet;
 }
