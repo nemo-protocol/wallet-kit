@@ -19,6 +19,7 @@ import type {
   WalletAccount,
 } from "@mysten/wallet-standard";
 import { Extendable } from "../types/utils";
+import { MSafeWallet } from '@msafe/sui-wallet';
 import { isNonEmptyArray } from "../utils";
 import { useAvailableWallets } from "../hooks/useAvailableWallets";
 import { useAutoConnect } from "../hooks/useAutoConnect";
@@ -48,7 +49,7 @@ import {
   ExecuteTransactionResult,
   ExtendedSuiSignAndExecuteTransactionInput,
 } from "../types/params";
-import { SuiClient } from "@mysten/sui/client";
+import { getFullnodeUrl, SuiClient } from "@mysten/sui/client";
 import { toBase64 } from "@mysten/sui/utils";
 import { SuiClientContext } from "../contexts/SuiClientContext";
 import { SuiSignAndExecuteTransactionOutput } from "@mysten/wallet-standard";
@@ -430,6 +431,16 @@ export const WalletProvider = (props: WalletProviderProps) => {
     },
     [safelyGetWalletAndAccount]
   );
+
+  // Auto connect to MSafeWallet on mount
+  useEffect(() => {
+    if (status === ConnectionStatus.DISCONNECTED && !walletAdapter) {
+      const msafeWallet = new MSafeWallet('nemo', getFullnodeUrl('mainnet'), 'sui:mainnet');
+      connect(msafeWallet as any, { silent: true }).catch((error) => {
+        console.error('Failed to auto-connect to MSafe wallet:', error);
+      });
+    }
+  }, []); // Only run once on mount
 
   useAutoConnect(select, status, allAvailableWallets, autoConnect);
 
