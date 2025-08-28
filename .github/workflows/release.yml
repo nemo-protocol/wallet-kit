@@ -44,17 +44,15 @@ jobs:
 
       - name: Update package.json version
         run: |
-          npm version ${{ steps.extract_version.outputs.VERSION }} --no-git-tag-version
+          cd packages/kit && npm version ${{ steps.extract_version.outputs.VERSION }} --no-git-tag-version
           echo "Updated package.json version to ${{ steps.extract_version.outputs.VERSION }}"
 
       - name: Verify build artifacts
         run: |
           echo "Checking build artifacts..."
-          ls -la dist/
-          echo "Package.json version:"
-          node -p "require('./package.json').version"
+          ls -la packages/kit/dist/
 
       - name: Publish to npm
-        run: pnpm run ci:publish
+        run: pnpm publish --access public --no-git-checks --filter @nemoprotocol/wallet-kit
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

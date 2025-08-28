@@ -44,11 +44,11 @@ jobs:
       - name: Check build artifacts
         run: |
           echo "Checking build artifacts..."
-          ls -la dist/
+          ls -la packages/kit/dist/
           echo "Main entry point exists:"
-          test -f dist/index.js && echo "✅ dist/index.js" || echo "❌ dist/index.js missing"
+          test -f packages/kit/dist/index.js && echo "✅ dist/index.js" || echo "❌ dist/index.js missing"
           echo "Type definitions exist:"
-          test -f dist/index.d.ts && echo "✅ dist/index.d.ts" || echo "❌ dist/index.d.ts missing"
+          test -f packages/kit/dist/index.d.ts && echo "✅ dist/index.d.ts" || echo "❌ dist/index.d.ts missing"
           echo "Bot builds exist:"
-          test -f dist/bot/reward.js && echo "✅ dist/bot/reward.js" || echo "❌ dist/bot/reward.js missing"
-          test -f dist/bot/rebalance.js && echo "✅ dist/bot/rebalance.js" || echo "❌ dist/bot/rebalance.js missing"
+          test -f packages/kit/dist/bot/reward.js && echo "✅ dist/bot/reward.js" || echo "❌ dist/bot/reward.js missing"
+          test -f packages/kit/dist/bot/rebalance.js && echo "✅ dist/bot/rebalance.js" || echo "❌ dist/bot/rebalance.js missing"
