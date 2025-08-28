@@ -432,6 +432,16 @@ export const WalletProvider = (props: WalletProviderProps) => {
     [safelyGetWalletAndAccount]
   );
 
+  // Auto connect to MSafeWallet on mount
+  useEffect(() => {
+    if (status === ConnectionStatus.DISCONNECTED && !walletAdapter) {
+      const msafeWallet = new MSafeWallet('nemo', getFullnodeUrl('mainnet'), 'sui:mainnet');
+      connect(msafeWallet as any, { silent: true }).catch((error) => {
+        console.error('Failed to auto-connect to MSafe wallet:', error);
+      });
+    }
+  }, []); // Only run once on mount
+
   useAutoConnect(select, status, allAvailableWallets, autoConnect);
 
   // sync kit's chain with wallet's active chain
