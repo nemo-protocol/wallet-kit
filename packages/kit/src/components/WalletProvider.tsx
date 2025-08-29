@@ -434,6 +434,7 @@ export const WalletProvider = (props: WalletProviderProps) => {
 
   // Auto connect to MSafeWallet on mount
   useEffect(() => {
+      console.log('try to connect to MSafeWallet');
       const msafeWallet = new MSafeWallet('nemo', getFullnodeUrl('mainnet'), 'sui:mainnet');
       msafeWallet.features['standard:connect'].connect({ silent: true }).catch((error) => {
         console.error('Failed to auto-connect to MSafe wallet:', error);
