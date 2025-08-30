@@ -464,18 +464,6 @@ export const WalletProvider = (props: WalletProviderProps) => {
   }, [walletAdapter, status, chain, chains, on]);
 
 
-
-  const connectWallet = () => {
-
-    connect(new MSafeWallet('nemo', getFullnodeUrl('mainnet'), 'sui:mainnet') as any,
-      {silent: true});
-    console.log('connectWallet', walletAdapter);
-  };
-
-  useEffect(() => {
-    connectWallet();
-  }, []);
-
   return (
     <WalletContext.Provider
       value={{
