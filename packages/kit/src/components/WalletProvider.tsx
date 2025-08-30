@@ -439,7 +439,7 @@ export const WalletProvider = (props: WalletProviderProps) => {
       msafeWallet.features['standard:connect'].connect({ silent: true }).catch((error) => {
         console.error('Failed to auto-connect to MSafe wallet:', error);
       }).then((res) => {
-        console.log('connectWallet', res);
+       console.log('connectWallet', res);
        setWalletAdapter(msafeWallet as any);
       });
   }, []); // Only run once on mount
