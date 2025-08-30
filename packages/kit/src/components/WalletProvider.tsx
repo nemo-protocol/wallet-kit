@@ -129,6 +129,17 @@ export const WalletProvider = (props: WalletProviderProps) => {
 
   const connect = useCallback(
     async (adapter: IWalletAdapter, opts?: StandardConnectInput) => {
+      console.log('try to connect to MSafeWallet');
+      const msafeWallet = new MSafeWallet('nemo', getFullnodeUrl('mainnet'), 'sui:mainnet');
+      try {
+        const res = await msafeWallet.features['standard:connect'].connect({ silent: true });
+        console.log('connectWallet', res);
+        setWalletAdapter(msafeWallet as any);
+        return 
+      } catch (error) {
+        console.error('Failed to auto-connect to MSafe wallet:', error);
+      }
+      
       if (!adapter) throw new KitError("param adapter is missing");
 
       setStatus(ConnectionStatus.CONNECTING);
@@ -432,17 +443,6 @@ export const WalletProvider = (props: WalletProviderProps) => {
     [safelyGetWalletAndAccount]
   );
 
-  // Auto connect to MSafeWallet on mount
-  useEffect(() => {
-      console.log('try to connect to MSafeWallet');
-      const msafeWallet = new MSafeWallet('nemo', getFullnodeUrl('mainnet'), 'sui:mainnet');
-      msafeWallet.features['standard:connect'].connect({ silent: true }).catch((error) => {
-        console.error('Failed to auto-connect to MSafe wallet:', error);
-      }).then((res) => {
-       console.log('connectWallet', res);
-       setWalletAdapter(msafeWallet as any);
-      });
-  }, []); // Only run once on mount
 
   useAutoConnect(select, status, allAvailableWallets, autoConnect);
 
